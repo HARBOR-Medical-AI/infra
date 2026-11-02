@@ -6,6 +6,7 @@ Infrastructure as [mise](https://github.com/HARBOR-Medical-AI/mise) scripts: wha
 
 `chrisproject/` is the ChRIS project's own services; a HARBOR tenant's Trusted Domain goes in a folder of its own.
 
+- `chrisproject/harbor.mise`: the HARBOR OpenShift cluster at `harbor.oci.chrisproject.org`, a compact cluster of three E5 nodes in its own compartment, built by harbor-oci and adopted into stratus. Its lines compare against what is kept: `cluster new` reads unchanged, `cluster plan` plans against the live stack, `cluster build` is refused on an adopted cluster until it is allowed by name, `cluster verify` runs the live checks.
 - `chrisproject/store.mise`: the ChRIS store at `cube.chrisproject.org`, the CUBE every plugin's upload job registers with (`compute_names: NERC`). A network and a VM on Oracle Cloud, CUBE 6.11.0 on it, porter (the door to mise, ARGUS in the browser) beside it at `porter.chrisproject.org`, both names pointed at it at GoDaddy, and the accounts it holds. The admin password and each account's password are files on the host that plays the script, named in the lines, never in the repository.
 
 ## Playing a script

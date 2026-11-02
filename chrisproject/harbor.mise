@@ -1,0 +1,13 @@
+# The HARBOR cluster at harbor.oci.chrisproject.org, as code (mise docs/stratus.adoc, D16 and D17).
+#
+# Played in a stratus session with the tasks tier: play /scripts/chrisproject/harbor.mise
+# The cluster was built by harbor-oci and adopted into stratus on 2026-10-22, so a play
+# compares: cluster new reads unchanged against the kept spec, cluster plan plans against
+# the live stack and reads nothing to do, cluster build is refused on an adopted cluster
+# until it is allowed by name, and cluster verify runs the live checks. A ChRIS on a
+# cluster is not a line yet: the ChRIS layer deploys to a VM today (D16).
+
+cluster new harbor --family E5 --plane 3x8/24 --workers 0x8/32 --data 20 --base-domain oci.chrisproject.org --compartment ocid1.compartment.oc1..aaaaaaaaxfexbkumzvovswxaqchnqe32cpol54eju4no7rom43hnhrnfqkta
+cluster plan harbor
+cluster build harbor
+cluster verify harbor

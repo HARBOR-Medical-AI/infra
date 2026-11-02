@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use these scripts, please cite them as below."
+title: "infra: infrastructure as mise scripts"
+type: software
+authors:
+  - family-names: Pienaar
+    given-names: Rudolph
+    affiliation: "Boston Children's Hospital"
+repository-code: "https://github.com/HARBOR-Medical-AI/infra"
+license: MIT
+keywords:
+  - ChRIS
+  - mise
+  - stratus
+  - infrastructure as code
+  - HARBOR
+  - Trusted Domain

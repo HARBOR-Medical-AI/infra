@@ -13,4 +13,4 @@ vm new store --net chrisproject-services --open 80,443 --vcpu 2 --memory 8 --dis
 vm build store
 chris deploy store --profile minimal --compute NERC --host cube.chrisproject.org --porter porter.chrisproject.org --admin-password-file ${HOME}/.config/chrisproject/store/chris-password
 chris user add rudolph --email rudolph.pienaar@childrens.harvard.edu --password-file ${HOME}/.config/chrisproject/store/rudolph-password --on store
-chris plugin sync --on store --ref 8c9a1f6
+chris plugin sync --on store --ref fb36dd6

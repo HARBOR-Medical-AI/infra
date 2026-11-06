@@ -6,7 +6,7 @@ import { join } from 'node:path';
 const VERBS = {
   net: ['new', 'plan', 'build', 'status', 'teardown'],
   vm: ['new', 'cost', 'plan', 'build', 'shell', 'protect', 'teardown'],
-  chris: ['status', 'deploy', 'user'],
+  chris: ['status', 'deploy', 'user', 'plugin'],
   cluster: ['new', 'plan', 'build', 'verify', 'status', 'protect', 'teardown'],
   spend: [],
   play: [],
